@@ -4,31 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How We Met</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
-<body class="bg-gradient-to-r from-pink-500 to-pink-300 text-white">
-    <header class="bg-black bg-opacity-50 p-5 text-center">
-        <h1 class="text-4xl">Our Scrapbook</h1>
-        <nav>
-            <ul class="list-none p-0 flex justify-center space-x-6">
-                <li><a href="index.html" class="text-white text-lg hover:text-yellow-300">Home</a></li>
-                <li><a href="first_date.html" class="text-white text-lg hover:text-yellow-300">First Date</a></li>
-                <li><a href="love_notes.html" class="text-white text-lg hover:text-yellow-300">Why I Love You</a></li>
-                <li><a href="map.html" class="text-white text-lg hover:text-yellow-300">Long-Distance Map</a></li>
-                <li><a href="playlist.html" class="text-white text-lg hover:text-yellow-300">Music & Memories</a></li>
-                <li><a href="future.html" class="text-white text-lg hover:text-yellow-300">Letter to the Future</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="p-5 text-center">
-        <section>
-            <h2 class="text-3xl mb-5">How We Met</h2>
-            <p class="text-lg">Our story began on a sunny day in the park...</p>
-        </section>
-    </main>
-    <footer class="bg-black bg-opacity-50 p-3 text-center">
-        <p class="m-0">&copy; 2023 Our Scrapbook</p>
-    </footer>
+<body class="bg-pink-100 text-gray-900 fade-in">
+    <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg border border-pink-300">
+        <h1 class="text-4xl font-bold text-center text-pink-600 mb-8">How We Met – Our Beginning</h1>
+        
+        <!-- Timeline -->
+        <div class="relative border-l-4 border-pink-300 pl-6">
+            
+            <!-- First Message -->
+            <div class="mb-10">
+                <span class="absolute -left-3.5 w-6 h-6 bg-pink-400 rounded-full"></span>
+                <h2 class="text-xl font-semibold text-pink-600">🌱 The First Message</h2>
+                <p class="text-gray-700">It all started with a simple message that changed everything.</p>
+                <button class="mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" onclick="alert('First Chat Screenshot! 📩')">See First Message</button>
+            </div>
+            
+            <!-- First Call -->
+            <div class="mb-10">
+                <span class="absolute -left-3.5 w-6 h-6 bg-blue-500 rounded-full"></span>
+                <h2 class="text-xl font-semibold text-pink-600">📞 The First Call</h2>
+                <p class="text-gray-700">Hearing each other’s voices for the first time was unforgettable.</p>
+                <button class="mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" onclick="alert('Audio clip coming soon! 🎧')">Hear the Call</button>
+            </div>
+            
+          
+            
+            <!-- First Gift -->
+            <div class="mb-10">
+                <span class="absolute -left-3.5 w-6 h-6 bg-yellow-500 rounded-full"></span>
+                <h2 class="text-xl font-semibold text-pink-600">🎁 The First Gift</h2>
+                <p class="text-gray-700">She gave me a hairband, and it meant the world to me.</p>
+                <button class="mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" onclick="alert('A sweet surprise! 🎀')">Reveal Gift</button>
+            </div>
+            
+            <!-- First I Love You -->
+            <div>
+                <span class="absolute -left-3.5 w-6 h-6 bg-red-500 rounded-full"></span>
+                <h2 class="text-xl font-semibold text-pink-600">❤️ The First 'I Love You'</h2>
+                <p class="text-gray-700">The words that changed everything, forever.</p>
+                <button class="mt-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600" onclick="alert('Our special moment ❤️')">See the Moment</button>
+            </div>
+            <!-- First Date -->
+          <div class="mb-10">
+            <span class="absolute -left-3.5 w-6 h-6 bg-green-500 rounded-full"></span>
+            <h2 class="text-xl font-semibold text-pink-600">💑 The First Date</h2>
+            <p class="text-gray-700">Our first hug, first meal together, and the best day of our lives.</p>
+            <div class="flex gap-4 mt-4">
+                <a href="first_date.html" class="enter-btn bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600 transition duration-300">💑View The First Date</a>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Short Story -->
+        <div class="mt-12 p-6 bg-white rounded-lg shadow-lg text-center">
+            <h2 class="text-2xl font-bold text-pink-600 mb-4">💌 A Short Note: Our Beginning</h2>
+            <p class="text-gray-700">Some love stories begin with grand gestures; ours started with small, meaningful moments—texting every day, sharing laughs, and finding comfort in each other. From virtual messages to real-world memories, every step brought us closer. And this is just the beginning…</p>
+        </div>
+
+    </div>
+    <div class="hearts absolute inset-0 pointer-events-none"></div>
 </body>
 </html>

@@ -3,32 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why I Love You</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Reasons I Love You ❤️</title>
+    <style>
+        .envelope {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .envelope:hover {
+            transform: scale(1.1);
+        }
+        .message {
+            display: none;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-r from-pink-500 to-pink-300 text-white">
-    <header class="bg-black bg-opacity-50 p-5 text-center">
-        <h1 class="text-4xl">Our Scrapbook</h1>
-        <nav>
-            <ul class="list-none p-0 flex justify-center space-x-6">
-                <li><a href="index.html" class="text-white text-lg hover:text-yellow-300">Home</a></li>
-                <li><a href="about.html" class="text-white text-lg hover:text-yellow-300">How We Met</a></li>
-                <li><a href="first_date.html" class="text-white text-lg hover:text-yellow-300">First Date</a></li>
-                <li><a href="map.html" class="text-white text-lg hover:text-yellow-300">Long-Distance Map</a></li>
-                <li><a href="playlist.html" class="text-white text-lg hover:text-yellow-300">Music & Memories</a></li>
-                <li><a href="future.html" class="text-white text-lg hover:text-yellow-300">Letter to the Future</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="p-5 text-center">
-        <section>
-            <h2 class="text-3xl mb-5">Why I Love You</h2>
-            <p class="text-lg">There are countless reasons why I love you...</p>
-        </section>
-    </main>
-    <footer class="bg-black bg-opacity-50 p-3 text-center">
-        <p class="m-0">&copy; 2023 Our Scrapbook</p>
-    </footer>
+<body class="bg-pink-100 flex flex-col items-center justify-center min-h-screen p-6">
+    <h1 class="text-4xl font-bold text-pink-600 mb-6">Reasons I Love You ❤️</h1>
+    
+    <div id="love-notes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="text-center">
+            <img src="/envelope.png" alt="Love Letter" class="envelope w-24 mx-auto" onclick="toggleMessage(1)">
+            <div id="message-1" class="message text-gray-700 mt-2">Your beautiful eyes that shine like stars ✨</div>
+        </div>
+        <div class="text-center">
+            <img src="/envelope.png" alt="Love Letter" class="envelope w-24 mx-auto" onclick="toggleMessage(2)">
+            <div id="message-2" class="message text-gray-700 mt-2">The way you care for me with all your heart ❤️</div>
+        </div>
+        <div class="text-center">
+            <img src="/envelope.png" alt="Love Letter" class="envelope w-24 mx-auto" onclick="toggleMessage(3)">
+            <div id="message-3" class="message text-gray-700 mt-2">Your laugh that makes my world brighter 😍</div>
+        </div>
+    </div>
+    
+    <button onclick="shuffleLoveNote()" class="mt-6 px-6 py-3 bg-pink-500 text-white rounded-full shadow-lg hover:bg-pink-600 transition">
+        💕 Shuffle Reason
+    </button>
+    
+    <div class="mt-6 w-full max-w-md">
+        <textarea id="reply" class="w-full p-3 rounded-lg border border-pink-300" placeholder="Write your own reply..."></textarea>
+        <button onclick="saveReply()" class="mt-3 px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition">💌 Save Reply</button>
+    </div>
+    
+    <script>
+        function toggleMessage(id) {
+            let message = document.getElementById(`message-${id}`);
+            message.style.display = message.style.display === "block" ? "none" : "block";
+        }
+        
+        function shuffleLoveNote() {
+            let notes = document.querySelectorAll(".message");
+            notes.forEach(note => note.style.display = "none");
+            let randomIndex = Math.floor(Math.random() * notes.length) + 1;
+            document.getElementById(`message-${randomIndex}`).style.display = "block";
+        }
+        
+        function saveReply() {
+            let reply = document.getElementById("reply").value;
+            if (reply.trim()) {
+                alert("Your reply has been saved: " + reply);
+                document.getElementById("reply").value = "";
+            } else {
+                alert("Please write a message before saving!");
+            }
+        }
+    </script>
 </body>
 </html>
